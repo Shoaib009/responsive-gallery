@@ -1,0 +1,104 @@
+.container {
+  display: grid;
+  grid-template: repeat(10, 100px) / repeat(1, 100px);
+  width: 100%;
+  margin-left: 20px;
+  justify-items: center;
+  gap: 0.1rem;
+  height: 300vh;
+}
+.box {
+  background-color: white;
+}
+.pictures {
+  object-fit: cover;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 3.5px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template: repeat(10, 100px) / repeat(2, 100px);
+    width: 100%;
+    margin-left: 20px;
+    justify-items: center;
+    gap: 0.1rem;
+    height: 300vh;
+  }
+  .box {
+    background-color: white;
+  }
+  .pictures {
+    object-fit: cover;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 3.5px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template: repeat(10, 100px) / repeat(3, 100px);
+    width: 100%;
+    margin-left: 20px;
+    justify-items: center;
+    grid-template-areas:
+      "one two two"
+      "three two two"
+      "four five six"
+      "seven . .";
+    gap: 0.1rem;
+    height: 300vh;
+  }
+  .box {
+    background-color: white;
+  }
+  .pictures {
+    object-fit: cover;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 3.5px;
+  }
+  .picture-one {
+    object-fit: cover;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 3.5px;
+  }
+  .box-one {
+    grid-area: one;
+  }
+
+  .box-two {
+    grid-area: two;
+  }
+  .box-three {
+    grid-area: two;
+    visibility: hidden;
+  }
+  .box-four {
+    grid-area: three;
+  }
+  .box-five {
+    grid-area: two;
+    visibility: hidden;
+  }
+  .box-six {
+    grid-area: two;
+    visibility: hidden;
+  }
+  .box-seven {
+    grid-area: four;
+  }
+  .box-eight {
+    grid-area: five;
+  }
+  .box-nine {
+    grid-area: six;
+  }
+
+  .box-ten {
+    grid-area: seven;
+  }
+}
